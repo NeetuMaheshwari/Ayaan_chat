@@ -12,8 +12,10 @@ app.get('/',(req,res) => {res.sendFile(__dirname +'/index.html')})
 
 //socket.io
 
-//const io =require('socket.io')(http)
-const io = socketIo(server, { cors: { origin: "localhost:3000", credentials: true } });
+const io =require('socket.io')(http, {
+    allowEIO3: true // false by default
+  })
+//const io = socketIo(server, { cors: { origin: "localhost:3000", credentials: true } });
 
 io.on('connection',(socket) =>{
     console.log('connected......');
