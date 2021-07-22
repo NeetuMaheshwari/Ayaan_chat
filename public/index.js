@@ -1,5 +1,5 @@
 //const socket=io()
-const socketURL = 'http://localhost:8080' // whatever your socket port
+const socketURL = 'http://localhost:3000' // whatever your socket port
 const socket = io(socketURL);
 socket.on("someEvent", data => {
     console.log('I can now do something with ');
