@@ -1,4 +1,9 @@
-const socket=io()
+//const socket=io()
+const socketURL = 'https://neetumaheshwari.github.io/Ayaan_chat/' // whatever your socket port
+const socket = io(socketURL);
+socket.on("someEvent", data => {
+    console.log('I can now do something with ');
+});
 let name;
 let textarea = document.querySelector('#textarea')
 let messsageArea= document.querySelector('.message_area')
