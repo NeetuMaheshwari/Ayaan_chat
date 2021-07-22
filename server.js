@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express()
 const http = require('http').createServer(app)
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 3000
 
 http.listen(PORT, ()=>{console.log(`listen on PORT ${PORT}`)})
 
@@ -12,7 +12,8 @@ app.get('/',(req,res) => {res.sendFile(__dirname +'/index.html')})
 
 //socket.io
 
-const io =require('socket.io')(http)
+//const io =require('socket.io')(http)
+const io = socketIo(server, { cors: { origin: "localhost:3000", credentials: true } });
 
 io.on('connection',(socket) =>{
     console.log('connected......');
