@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express()
 const http = require('http').createServer(app)
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || https://neetumaheshwari.github.io/Ayaan_chat/
 
 http.listen(PORT, ()=>{console.log(`listen on PORT ${PORT}`)})
 
