@@ -12,7 +12,7 @@ app.get('/',(req,res) => {res.sendFile(__dirname +'/index.html')})
 
 //socket.io
 
-const io = require("socket.io")(http, {
+const io = require("socket.io")("https://neetumaheshwari.github.io/Ayaan_chat/", {
   allowRequest: (req, callback) => {
     callback(null, false);
   }
