@@ -1,5 +1,5 @@
 //const socket=io()
-const socketURL = 'https://neetumaheshwari.github.io/Ayaan_chat/' // whatever your socket port
+const socketURL = '3000' // whatever your socket port
 const socket = io(socketURL);
 socket.on("someEvent", data => {
     console.log('I can now do something with ');
