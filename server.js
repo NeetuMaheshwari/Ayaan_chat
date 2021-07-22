@@ -12,7 +12,7 @@ app.get('/',(req,res) => {res.sendFile(__dirname +'/index.html')})
 
 //socket.io
 //const io = require("socket.io").listen(http);
-const io = require('socket.io-client')('http://localhost', {
+const io = require('socket.io-client')('https://neetumaheshwari.github.io/Ayaan_chat/', {
   rejectUnauthorized:   false,
 })
 //const io = require("socket.io")("https://neetumaheshwari.github.io/Ayaan_chat/", {
