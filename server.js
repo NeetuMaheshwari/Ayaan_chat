@@ -2,8 +2,9 @@ const express = require("express");
 
 const app = express()
 const http = require('http').createServer(app)
-const PORT = process.env.PORT || https://neetumaheshwari.github.io/Ayaan_chat/
-
+//const PORT = process.env.PORT || https://neetumaheshwari.github.io/Ayaan_chat/
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 http.listen(PORT, ()=>{console.log(`listen on PORT ${PORT}`)})
 
 app.use(express.static(__dirname+'/public'))
@@ -33,7 +34,10 @@ io.on('connection',(socket) =>{
     })
 })
 
-http.listen(5000, () => {
-  console.log(`Listening on ${http.address().port}`);
+//http.listen(3000, () => {
+//  console.log(`Listening on ${http.address().port}`);
+//});
+app.listen(port, host, function() {
+  console.log("Server started.......");
 });
 
